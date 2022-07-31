@@ -1,13 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>P4dAngularUi</title>
+  <title>P4D</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+  <script type="text/javascript" 
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  
+    </script> 
+  
 </head>
 <body>
   <app-root></app-root>
+
+  <script>
+    (function ($) {
+        $(window).load(function () {
+
+            $(".passion-scrolling").mCustomScrollbar({
+                autoHideScrollbar: false,
+                theme: "rounded"
+            });
+
+        });
+    })(jQuery);
+
+  </script>
+
+<script type="text/javascript">
+  (function ($) {
+      var $tiles = $('#tiles'),
+          $handler = $('li', $tiles),
+          $main = $('#main'),
+          $window = $(window),
+          $document = $(document),
+          options = {
+              autoResize: true, // This will auto-update the layout when the browser window is resized.
+              container: $main, // Optional, used for some extra CSS styling
+              offset: 20, // Optional, the distance between grid items
+              itemWidth: 210 // Optional, the width of a grid item
+          };
+      /**
+       * Reinitializes the wookmark handler after all images have loaded
+       */
+      function applyLayout() {
+          $tiles.imagesLoaded(function () {
+              // Destroy the old handler
+              if ($handler.wookmarkInstance) {
+                  $handler.wookmarkInstance.clear();
+              }
+              // Create a new layout handler.
+              $handler = $('li', $tiles);
+              $handler.wookmark(options);
+          });
+      }
+      /**
+       * When scrolled all the way to the bottom, add more tiles
+       */
+      function onScroll() {
+          // Check if we're within 100 pixels of the bottom edge of the broser window.
+          var winHeight = window.innerHeight ? window.innerHeight : $window.height(), // iphone fix
+              closeToBottom = ($window.scrollTop() + winHeight > $document.height() - 100);
+          if (closeToBottom) {
+              // Get the first then items from the grid, clone them, and add them to the bottom of the grid
+              var $items = $('li', $tiles),
+                  $firstTen = $items.slice(0, 10);
+              $tiles.append($firstTen.clone());
+              applyLayout();
+          }
+      };
+      // Call the layout function for the first time
+      applyLayout();
+      // Capture scroll event.
+//this line make auto scroll in event page
+     // $window.bind('scroll.wookmark', onScroll);
+  })(jQuery);
+</script>
+
+<script>
+  window.onload = preloader();
+  function preloader() {
+      document.getElementById('home').className = '';
+      document.getElementById('dessert').className = '';
+      document.getElementById('catering').className = '';
+      document.getElementById('events').className = '';
+      document.getElementById('aboutus').className = '';
+      document.getElementById('contactus').className = '';
+
+      var page = document.URL.toLowerCase();
+
+if(page=='http://passionfordessert.net/')
+{
+showApp();
+
+}
+
+      if (window.location.href.toLowerCase().indexOf('index') > 0) {
+          document.getElementById('home').className = 'active';
+showApp();
+      }
+      if (window.location.href.toLowerCase().indexOf('desserts') > 0) {                
+          document.getElementById('dessert').className = 'active';
+
+      }
+      if (window.location.href.toLowerCase().indexOf('catering') > 0) {
+          document.getElementById('catering').className = 'active';
+      }
+      if (window.location.href.toLowerCase().indexOf('events') > 0) {
+          document.getElementById('events').className = 'active';
+      }
+      if (window.location.href.toLowerCase().indexOf('aboutus') > 0) {
+          document.getElementById('aboutus').className = 'active';
+      }
+      if (window.location.href.toLowerCase().indexOf('contactus') > 0) {
+          document.getElementById('contactus').className = 'active';
+      }
+      
+     
+     
+  };
+</script>
+    
 </body>
 </html>

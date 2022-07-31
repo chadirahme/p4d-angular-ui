@@ -23,9 +23,20 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/style.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/font-awesome/css/font-awesome.min.css",
+              "src/assets/css/jquery.mCustomScrollbar.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/custom.js",
+              "src/assets/js/jquery.mCustomScrollbar.concat.min.js",
+              "src/assets/js/toastr.js",
+              "src/assets/js/jquery.imagesloaded.js",
+              "src/assets/js/jquery.wookmark.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -97,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
