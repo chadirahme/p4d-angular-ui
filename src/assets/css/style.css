@@ -188,6 +188,7 @@ img {
 
 figure.effect-milo {
 	background: #2e5d5a;
+	filter: brightness(100%);
 }
 
 figure.effect-milo img {

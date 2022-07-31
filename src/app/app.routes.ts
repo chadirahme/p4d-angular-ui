@@ -7,6 +7,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { EventsComponent } from './events/events.component';
 import { CateringComponent } from './catering/catering.component';
 import { ProductsComponent } from './products/products.component';
+import { CakesComponent } from './cakes/cakes.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'aboutus' , component:AboutusComponent},
   {path:'events' , component:EventsComponent},
   {path:'catering',component:CateringComponent},
-  {path:'products',component:ProductsComponent}
+  {path:'products',component:ProductsComponent},
+  {path:'cakes',component:CakesComponent}
 ];
 
 @NgModule({
