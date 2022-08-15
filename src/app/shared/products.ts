@@ -3,4 +3,6 @@ export class Products {
     productImage: string;
     productName: string;
     productDesc: string;
+    productPrice:number;
+    productType:string;
  }

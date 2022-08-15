@@ -10,7 +10,7 @@ import { Products } from '../shared/products';
 export class WelcomeComponent implements OnInit {
 
   homePath1: string = "assets/img/";
-  homePath: string ="https://s3.ca-central-1.amazonaws.com/passionfordessert.net/assets/img/home/";
+  homePath: string ="https://s3.ca-central-1.amazonaws.com/passionfordessert.net/assets/img/Home/";
 
   path: string = "assets/img/Cakes.jpg";
   products:Products[];
@@ -20,7 +20,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
     var x=0;
 
-    this.dataService.getProducts().subscribe((data) => {
+    this.dataService.getlistAllProductType('home').subscribe((data) => {
       console.log(data);
       this.products = data;
     })  

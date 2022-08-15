@@ -13,84 +13,21 @@
         <img src="{{ homePath + product.productImage}}" alt="img11"/>
         <figcaption>
           <div class="portfolio-title"><h2>{{product.productName}}</h2></div>
-            <a href="/cakes">View more1</a>
+        
+
+          <!-- <div *ngIf="product.productName=='CatEring' ? thenBlock : product.productName=='Events' then EventsBlock;  else elseBlock"></div> -->
+          <div *ngIf="product.productName === 'CatEring'; then thenBlock;
+           else (product.productName === 'Events' && EventsBlock) || (elseBlock)"></div>
+ 
+          <ng-template #elseBlock> <a href="/products/{{product.productName}}">View more1</a></ng-template>
+            <ng-template #thenBlock> <a href="/catering">View more1</a></ng-template>
+            <ng-template #EventsBlock> <a href="/events">View more1</a></ng-template>
+
+            <!-- <a href="/products/{{product.productName}}">View more1</a> -->
         </figcaption>   
       </figure>
     </div>
 
-  <div class="grid" style="visibility:hidden;">
-    <figure class="effect-milo">
-        <!-- <img src="{{path}}" alt="img11"/> -->
-        <img src="https://s3.ca-central-1.amazonaws.com/passionfordessert.net/assets/img/home/Cakes.jpg">
-        <!-- <img alt="img" src="assets/img/Cakes.jpg"/> -->
-        <figcaption>
-          <div class="portfolio-title"><h2>Cakes</h2></div>
-          <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
-            <a href="/cakes">View more1</a>
-        </figcaption>     
-      </figure>
-
-      <figure class="effect-milo">
-        <img src="assets/img/Muffins.jpg" alt="img11"/>
-        <figcaption>
-          <div class="portfolio-title"><h2>Muffins</h2></div>
-          <a href="Muffins.aspx">View more</a>
-        </figcaption>     
-      </figure>
-
-      <figure class="effect-milo">
-        <img src="assets/img/Cupcakes.jpg" alt="img11"/>
-        <figcaption>
-          <div class="portfolio-title"><h2>CupCakes</h2></div>
-          <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
-            <a href="Cakes.aspx">View more1</a>
-        </figcaption>     
-      </figure>
-
-      <figure class="effect-milo">
-        <img src="assets/img/Cookies.jpg" alt="img11"/>
-        <figcaption>
-          <div class="portfolio-title"><h2>Cookies</h2></div>
-          <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
-            <a href="Cakes.aspx">View more1</a>
-        </figcaption>     
-      </figure>
-
-
-      <figure class="effect-milo">
-        <img src="assets/img/Tart.jpg" alt="img11"/>
-        <figcaption>
-          <div class="portfolio-title"><h2>Tart</h2></div>
-          <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
-            <a href="Cakes.aspx">View more1</a>
-        </figcaption>     
-      </figure>
-      <figure class="effect-milo">
-        <img src="assets/img/Bars.jpg" alt="img11"/>
-        <figcaption>
-          <div class="portfolio-title"><h2>Bars & Squares</h2></div>
-          <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
-            <a href="Cakes.aspx">View more1</a>
-        </figcaption>     
-      </figure>
-      <figure class="effect-milo">
-        <img src="assets/img/Events.jpg" alt="img11"/>
-        <figcaption>
-          <div class="portfolio-title"><h2>Events</h2></div>
-          <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
-            <a href="Cakes.aspx">View more1</a>
-        </figcaption>     
-      </figure>
-      <figure class="effect-milo">
-        <img src="assets/img/Catering.jpg" alt="img11"/>
-        <figcaption>
-          <div class="portfolio-title"><h2>CatEring</h2></div>
-          <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
-            <a href="Cakes.aspx">View more1</a>
-        </figcaption>     
-      </figure>
-
-  </div>
   </section>
   </div>
 

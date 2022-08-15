@@ -17,6 +17,7 @@ const routes: Routes = [
   {path:'events' , component:EventsComponent},
   {path:'catering',component:CateringComponent},
   {path:'products',component:ProductsComponent},
+  {path:'products/:type',component:ProductsComponent},
   {path:'cakes',component:CakesComponent}
 ];
 

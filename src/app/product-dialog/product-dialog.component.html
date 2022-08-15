@@ -1,0 +1,65 @@
+<h2 mat-dialog-title>{{description | breakFilter}}</h2>
+
+<mat-dialog-content>
+    <!-- Modal -->
+    <div id="passion-modal" class="single-product">
+        <div class="modal-body passion-modal">
+            <div class="row">
+                
+                <div class="col-lg-5 col-md-6 col-lg-offset-1 margin-top30">
+                    <!-- Start border#1 style -->
+                    <div class="border-style">
+                      <div class="top-left"></div><div class="top-middle"></div><div class="top-right"></div>
+                      <div class="middle-left"></div><div class="middle-middle min-height350">
+                      
+                        <h4>{{ productData.productName}}</h4>
+
+                        <p innerHtml="{{ productData.productDesc | breakFilter }}"></p>
+                        <!-- <p>{{description | breakFilter}}</p> -->
+
+                        <!-- <p innerHtml="{{ productData.productDesc | breakFilter }}"></p> -->
+                     
+                        <!-- <p>This Blueberry Baked CheeseCake filled with delicious healthy ingredients of Passion for Dessert.</p><p> Serve for 10 persons</p> -->
+                     
+                    </div><div class="middle-right"></div>
+                      <div class="bottom-left"></div><div class="bottom-middle"></div><div class="bottom-right"></div>                
+                    </div> 
+                </div>
+
+                <div class="col-lg-5  col-md-6 margin-top30">
+                    <!-- Start border#1 style -->
+                    <div class="border-style">
+                      <div class="top-left"></div><div class="top-middle"></div><div class="top-right"></div>
+                      <div class="middle-left"></div><div class="middle-middle">
+                        <!-- <img src="assets/img/dessert/c02_.jpg" alt="img11"/> -->
+                        <img src="{{ homePath + productData.productImage}}" alt="img11"/>
+
+                      </div><div class="middle-right"></div>
+                      <div class="bottom-left"></div><div class="bottom-middle"></div><div class="bottom-right"></div>                
+                    </div>
+                    <!-- <div class="border-footer"></div>               -->
+                    <!-- End border#1 style -->            
+                </div>        
+
+            </div> <!-- end .row -->  
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-lg-offset-5 margin-top30">
+ 
+                 <h3> C${{productData.productPrice}}</h3>           
+                  <button type="button" class="single-product-cart" aria-label="Left Align">
+                    <img alt="img" src="assets/img/cart.jpg" style="vertical-align: middle;height:min-content;"/> Add to Cart
+                  </button>    
+                  
+                  <button class="mat-raised-button" (click)="close()">Close</button>
+
+                </div>
+              </div> 
+
+        </div>
+       
+        </div>
+      <!-- /Modal -->   
+      
+ 
+</mat-dialog-content>

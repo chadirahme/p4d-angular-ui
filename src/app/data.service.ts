@@ -10,7 +10,11 @@ import { Observable, throwError } from 'rxjs';
 })
 export class DataService {
 
-  private REST_API_SERVER = "http://localhost:8080/products";
+  private Base_API_SERVER1 = "http://localhost:8080/api/";
+  private Base_API_SERVER = "http://api.passionfordessert.net//api/";
+
+  //private REST_API_SERVER = "http://localhost:8080/api/products";
+  //private REST_API_SERVER1 = "http://api.passionfordessert.net/products";
 
   constructor(private httpClient: HttpClient) { }
  // Http Headers
@@ -20,12 +24,17 @@ export class DataService {
   }),
 };
 
-  public sendGetRequest(){
-    return this.httpClient.get<Products[]>(this.REST_API_SERVER);
-  }
+  // public sendGetRequest(){
+  //   return this.httpClient.get<Products[]>(this.REST_API_SERVER);
+  // }
 
-  public getProducts():Observable<Products[]> {
-    return this.httpClient.get<Products[]>(this.REST_API_SERVER)
+  // public getProducts():Observable<Products[]> {
+  //   return this.httpClient.get<Products[]>(this.REST_API_SERVER)
+  //   .pipe(retry(1), catchError(this.errorHandl));
+  // }
+
+  public getlistAllProductType(type:string):Observable<Products[]> {
+    return this.httpClient.get<Products[]>(this.Base_API_SERVER+"listAllProductType/"+type)
     .pipe(retry(1), catchError(this.errorHandl));
   }
 

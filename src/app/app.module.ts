@@ -16,6 +16,9 @@ import { CateringComponent } from './catering/catering.component';
 import { ProductsComponent } from './products/products.component';
 import { CakesComponent } from './cakes/cakes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductDialogComponent } from './product-dialog/product-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BreakFilterPipe } from './shared/break-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -27,10 +30,14 @@ import { HttpClientModule } from '@angular/common/http';
     EventsComponent,
     CateringComponent,
     ProductsComponent,
-    CakesComponent
+    CakesComponent,
+    ProductDialogComponent,
+    BreakFilterPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule, 
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
@@ -39,6 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ProductDialogComponent]
 })
 export class AppModule { }
