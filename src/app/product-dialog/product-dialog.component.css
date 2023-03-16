@@ -1,0 +1,102 @@
+.modal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.btn-color {
+    background-color: #8b1b3f;
+    border-color: #8b1b3f;
+    color: #fff;
+    font-size: 24px !important;
+}
+
+
+/* .md-dialog-container {
+    background-color: #000;
+    width: 250px;
+    height: 250px
+} */
+
+.mat-dialog-title{
+    background-color: #ffc5dd;
+    font-size: 26px;
+    border-bottom: 1px;
+    color: white;
+}
+
+.mat-dialog-container {
+    background-color: #ffc5dd;
+    /* height: 700px !important;
+    width: 900px !important; */
+}
+
+/* ::ng-deep .mat-dialog-container {
+    background-color: #ffc5dd;
+    height: 700px !important;
+    width: 900px !important;
+} */
+
+/* .my-class .mat-dialog-container{
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
+    background-color: #ffc5dd;
+  } */
+
+/* .dialog-title {
+    color: #8c1d40;
+    font-size: 26px;
+    border-bottom: 1px;
+   
+} */
+/* 
+.top-left {
+    float: left;
+    background: url(../../assets/css/img/border/top-left.png);
+    width: 30px;
+    height: 30px;
+}
+
+.top-middle {
+    float: left;
+    background: url(../../assets/css/img/border/top-middle.png);
+    height: 30px;
+    width: 83%;
+}
+
+.top-right {
+    float: left;
+    background: url(../../assets/css/img/border/top-right.png);
+    width: 30px;
+    height: 30px;
+}
+
+.middle-right, .middle-right2, .middle-right-offer {
+    float: left;
+    background: url(../../assets/css/img/border/right.png);
+    width: 30px;
+    height: 20px;
+}
+
+.bottom-middle, .bottom-middle2 {
+    float: left;
+    background: url(../../assets/css/img/border/bottom-middle.png);
+    height: 30px;
+    width: 83%;
+}
+
+.bottom-left {
+    clear: both;
+    float: left;
+    background: url(../../assets/css/img/border/bottom-left.png);
+    width: 30px;
+    height: 30px;
+}
+
+.bottom-right {
+    float: left;
+    background: url(../../assets/css/img/border/bottom-right.png);
+    width: 30px;
+    height: 30px;
+} */

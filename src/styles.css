@@ -23,3 +23,10 @@ background: #ffc5dd !important ;
 /* img {
 	width: 100% !important ;
 } */
+
+.my-class .mat-dialog-container{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    /* background-color: #ffc5dd; */
+  }

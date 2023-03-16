@@ -93,14 +93,31 @@
                   </div>
                   <div class="navbar-collapse collapse">
                     <!-- Right nav -->
-                      <ul class="nav navbar-nav navbar-right">
-                      <li id="home" class="active"><a href="/">Home</a></li>
-                      <li id="dessert" ><a href="/products">Product</a></li>
-                      <li id="catering"><a href="/catering">Catering</a></li>
-                      <li id="events"><a href="/events">News & Events</a></li>
-                      <li id="aboutus"><a href="/aboutus">About</a></li>
-                      <li id="contactus"><a href="/contactus">Contact</a></li>          
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a id="home" href="/">Home</a></li>
+
+                      <!-- <li><a  [ngClass]="{'rotate': toggle}" (click)="test($event);">click me</a></li> -->
+
+                      <li id="dessert1" ><a id="dessert" (click)="test($event);" [ngClass]="{'rotate': toggle}" href="/products">Product</a></li>
+                      <li id="catering1"><a id="catering" href="/catering">Catering</a></li>
+                      <!-- <li id="events"><a href="/events">News & Events</a></li> -->
+                      <li ><a id="aboutus" href="/aboutus">About</a></li>
+                      <li ><a id="contactus" href="/contactus">Contact</a></li> 
+                      
+                      <!-- <li><h1>({{calcTotal()}})</h1></li> -->
+                      <li><h1> {{carts}}</h1></li>
                     </ul>
+
+                      <!-- <ul class="nav navbar-nav navbar-right">
+                      <li id="home"><a [routerLink]="['/home']">Home</a></li>
+                      <li id="dessert"><a [routerLink]="['/products']">Product</a></li>
+                      
+                      <li id="catering" ><a href="/catering">Catering</a></li>
+                      <li id="events"><a  href="/events">News & Events</a></li>
+                      <li id="aboutus"><a  href="/aboutus">About</a></li>
+                      <li id="contactus"><a href="/contactus">Contact</a></li>    
+                    </ul> -->
+
                   </div>
                   <!--/.nav-collapse -->
                 </div>              
@@ -126,11 +143,13 @@
             </div>
             <div class="col-lg-6 col-md-9 col-xs-12 col-sm-9">
               <div class="footer-social text-right">
-                <ul id="footer-links" class="list-inline">
+                
+                <!-- <ul id="footer-links" class="list-inline">
                   <li><span>|</span><a href="#" data-toggle="modal" data-target="#offerModal">OFFER REQUEST</a></li>
                   <li><span>|</span><a href="Faq.aspx">FAQ</a></li>
                   <li><span>|</span><a href="Testimonials.aspx">TESTIMONIALS</a><span>|</span></li>
-                </ul> 
+                </ul>  -->
+
                 <ul id="social-links" class="list-inline">
                   <li><a href="https://www.facebook.com/Passion4D" target="_blank"><img src="assets/img/facebook.png" alt="Facebook"/></a></li>
                   <li><a href="http://pinterest.com/passion4d/" target="_blank"><img src="assets/img/pinterest.png" alt="Pinterest"/></a></li>

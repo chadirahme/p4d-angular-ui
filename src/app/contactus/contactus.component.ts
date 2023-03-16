@@ -10,6 +10,8 @@ export class ContactusComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.getElementById('home')?.classList.remove("rotate");
+    document.getElementById('contactus')?.classList.add("rotate");
   }
 
 }

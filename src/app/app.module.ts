@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductDialogComponent } from './product-dialog/product-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BreakFilterPipe } from './shared/break-filter.pipe';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BreakFilterPipe } from './shared/break-filter.pipe';
   imports: [
     BrowserModule,
     FormsModule, 
+    RouterModule,
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,

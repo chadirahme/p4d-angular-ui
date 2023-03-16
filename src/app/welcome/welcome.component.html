@@ -16,12 +16,15 @@
         
 
           <!-- <div *ngIf="product.productName=='CatEring' ? thenBlock : product.productName=='Events' then EventsBlock;  else elseBlock"></div> -->
-          <div *ngIf="product.productName === 'CatEring'; then thenBlock;
-           else (product.productName === 'Events' && EventsBlock) || (elseBlock)"></div>
+          <div *ngIf="product.productName === 'Catering'; then thenBlock;
+           else (product.productName === 'Events' && EventsBlock) 
+           || (product.productName.includes('Bars') && BarsBlock)
+           || (elseBlock)"></div>
  
           <ng-template #elseBlock> <a href="/products/{{product.productName}}">View more1</a></ng-template>
             <ng-template #thenBlock> <a href="/catering">View more1</a></ng-template>
             <ng-template #EventsBlock> <a href="/events">View more1</a></ng-template>
+            <ng-template #BarsBlock> <a href="/products/Bars">View more1</a></ng-template>
 
             <!-- <a href="/products/{{product.productName}}">View more1</a> -->
         </figcaption>   

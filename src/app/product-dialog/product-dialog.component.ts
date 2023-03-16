@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DataService } from '../data.service';
 import { Products } from '../shared/products';
 
 @Component({
@@ -12,11 +13,12 @@ export class ProductDialogComponent implements OnInit {
 
     homePath: string ="https://s3.ca-central-1.amazonaws.com/passionfordessert.net/assets/img/";
     form: FormGroup;
-    description:string = " Passion for Dessert.  Serve for 10 persons";
+    description:string = " Passion for Dessert !!";
     productData:Products;
 
 
     constructor(
+      private dataService: DataService,
       private fb: FormBuilder,
       private dialogRef: MatDialogRef<ProductDialogComponent>,
       @Inject(MAT_DIALOG_DATA) data:any) 
@@ -42,5 +44,14 @@ close() {
   this.dialogRef.close();
 }
 
+cartProductList:any = [];
+addToCart(){
+ 
+  this.cartProductList.push(this.productData); 
+  console.log(this.cartProductList);
+  console.log(this.cartProductList.length);
+  this.dataService.addItem(this.productData);
+  this.dataService.cartItems.next(this.cartProductList);
+}
 
 }

@@ -11,6 +11,7 @@ import { CakesComponent } from './cakes/cakes.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
+  {path: 'home', component: WelcomeComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'contactus', component: ContactusComponent},
   {path:'aboutus' , component:AboutusComponent},

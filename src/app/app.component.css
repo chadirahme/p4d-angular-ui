@@ -1,6 +1,13 @@
 body{
   background: #ffc5dd;
 }
+
+.rotate{
+  /* -webkit-animation: rotation 1s 1 linear; */
+  background: none;
+  color: #8c1d40 !important ;
+}
+
 /* mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     height: 100%;
   }
