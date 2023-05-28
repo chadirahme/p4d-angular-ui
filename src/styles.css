@@ -16,6 +16,7 @@ img {
 	max-width: 100%;
 } */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 body {
 background: #ffc5dd !important ;
 }

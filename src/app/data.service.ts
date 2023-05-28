@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Products } from './shared/products';
+import { Products, UsersData } from './shared/products';
 import { retry, catchError } from 'rxjs/operators';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 
@@ -12,8 +12,8 @@ export class DataService {
 
   public cartItems: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
-  private Base_API_SERVER = "http://localhost:8080/api/";
-  private Base_API_SERVER1 = "http://api.passionfordessert.net/api/";
+  private Base_API_SERVER1 = "http://localhost:8080/api/";
+  private Base_API_SERVER = "http://api.passionfordessert.net/api/";
 
   //private REST_API_SERVER = "http://localhost:8080/api/products";
   //private REST_API_SERVER1 = "http://api.passionfordessert.net/products";
@@ -44,6 +44,13 @@ export class DataService {
   addItem(productData:any){
     this.cartProductList.push(productData); 
   }
+
+
+  public addUserMail(userData:UsersData):Observable<Products[]> {
+    return this.httpClient.post<Products[]>(this.Base_API_SERVER+"v1/mailList",userData)
+    .pipe(retry(1), catchError(this.errorHandl));
+  }
+
 
   // Error handling
   errorHandl(error:any) {

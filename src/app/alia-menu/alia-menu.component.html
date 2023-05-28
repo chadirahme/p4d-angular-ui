@@ -1,0 +1,53 @@
+<!-- <h2>Cafe Menu</h2>
+    <div *ngFor="let item of menuItems">
+      <h3>{{item.name}}</h3>
+      <p>{{item.description}}</p>
+      <p>{{item.price | currency:'USD'}}</p>
+    </div> -->
+
+    <div class="row">
+        <div class="column left" >
+            <img src="{{ homePath + ''}}" alt="Cafe Image">
+        <br><br>
+            <img src="{{ homePath1 + ''}}" alt="Cafe Image">
+        </div>
+        <div class="column right" >
+            <h2>Cafe Menu</h2>
+            <div *ngFor="let item of menuItems">
+                <h3>{{item.name}}</h3>
+                <p>{{item.description}}</p>
+                <p>{{item.price | currency:'USD'}}</p>
+              </div>
+        </div>
+      </div>
+
+    <!-- <div class="row">
+        <div class="column">
+            <img src="{{ homePath + ''}}" alt="Cafe Image">
+        </div>
+        <div class="column">
+            <h2>Cafe Menu</h2>
+            <div *ngFor="let item of menuItems">
+                <h3>{{item.name}}</h3>
+                <p>{{item.description}}</p>
+                <p>{{item.price | currency:'USD'}}</p>
+              </div>
+        </div>
+      </div> -->
+
+
+    <!-- <div class="container">
+        <div class="image">
+            <img src="{{ homePath + ''}}" alt="Cafe Image">
+          </div>
+          
+        <div class="menu">
+          <h2>Cafe Menu</h2>
+          <div *ngFor="let item of menuItems">
+            <h3>{{item.name}}</h3>
+            <p>{{item.description}}</p>
+            <p>{{item.price | currency:'USD'}}</p>
+          </div>
+        </div>
+       
+      </div> -->

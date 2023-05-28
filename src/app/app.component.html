@@ -72,7 +72,7 @@
 </mat-sidenav-container> -->
 
 <div class="wrapper">
-  <header id="header">
+  <header id="header"  *ngIf="router.url !== '/menu' && router.url !== '/user'">
     <div id="logo">
       <a href="/"><img src="assets/img/logo.png" alt="logo"></a>
     </div>  
@@ -105,7 +105,7 @@
                       <li ><a id="contactus" href="/contactus">Contact</a></li> 
                       
                       <!-- <li><h1>({{calcTotal()}})</h1></li> -->
-                      <li><h1> {{carts}}</h1></li>
+                      <!-- <li><h1> {{carts}}</h1></li> -->
                     </ul>
 
                       <!-- <ul class="nav navbar-nav navbar-right">
@@ -134,7 +134,7 @@
   <footer id="sticky-footer-space">
     <!-- This space is for sticky *Required*-->
   </footer>  
-  <footer id="footer">
+  <footer id="footer" *ngIf="router.url !== '/menu' && router.url !== '/user'">
      <div class="container w100">
         <div class="row">
             <div class="col-lg-6 col-md-3 col-xs-12 col-sm-3">

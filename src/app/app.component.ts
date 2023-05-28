@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from './data.service';
+import { NotificationService } from './notification.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,8 @@ import { DataService } from './data.service';
 })
 export class AppComponent implements OnInit{
 
-  constructor(private route: ActivatedRoute, private router: Router,
-    private dataService: DataService) {
+  constructor(private route: ActivatedRoute, public router: Router,
+    private dataService: DataService, private notifyService : NotificationService) {
       this.dataService.cartItems.subscribe(value=>{
         console.log("cnt>> "+value);
         this.carts =this.dataService.cartProductList.length;

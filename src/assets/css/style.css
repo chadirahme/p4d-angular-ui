@@ -273,8 +273,17 @@ figure.effect-milo:hover p {
 }
 .products {
 	min-height: 1px;
+	/* display: flex; */
 }
 .product-item {
+	/* flex: 33.33%;
+     padding: 5px; */
+
+	 /* display: flex;
+  justify-content: space-between;
+  height: 200px;
+  align-items: stretch; */
+
 	float: left;
 	width: 33.33%;
 	position: relative;
@@ -287,12 +296,25 @@ figure.effect-milo:hover p {
 	position: relative;
 	top: -3px;
 }
-.product-img img {
-    display: block;
-    max-width: 100%;
+.product22-img img {
+    display: block; 
+     max-width: 100%;
     min-height: 100%;
+	max-height: 200px;
+height: 70%;
+object-fit: cover;
+  object-position: bottom;
+	/* max-height: 220px; */
+	
 }
 
+.product-img img {
+	display: block; 
+	/* height:250px; */
+	height:100%;
+    width:100%;
+	object-fit: cover;
+}
 .product-img img {
 /*	max-width: none;
 	width: -webkit-calc(100% + 60px);

@@ -11,7 +11,9 @@ import { Products } from '../shared/products';
 })
 export class ProductDialogComponent implements OnInit {
 
-    homePath: string ="https://s3.ca-central-1.amazonaws.com/passionfordessert.net/assets/img/";
+    homePath1: string ="https://s3.ca-central-1.amazonaws.com/passionfordessert.net/assets/img/";
+    homePath: string ="https://s3.ca-central-1.amazonaws.com/passion4d.ca/assets/img/";
+
     form: FormGroup;
     description:string = " Passion for Dessert !!";
     productData:Products;
